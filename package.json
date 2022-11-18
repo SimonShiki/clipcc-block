@@ -13,8 +13,9 @@
   "browser": "./shim/vertical.js",
   "scripts": {
     "deploy": "rimraf gh-pages/closure-library/scripts/ci/CloseAdobeDialog.exe && gh-pages -t -d gh-pages -m \"Build for $(git log --pretty=format:%H -n1)\"",
-    "build": "python build.py && webpack --hide-modules",
-    "build:debug": "python build.py --debug && webpack --hide-modules",
+    "build": "python3 build.py && webpack --hide-modules",
+    "build:legacy": "python2 build_legacy.py && webpack --hide-modules",
+    "build:debug": "python3 build.py --debug && webpack --hide-modules",
     "dist": "python build.py production && webpack --mode=production --progress",
     "test:unit": "node tests/jsunit/test_runner.js",
     "test:lint": "eslint .",
