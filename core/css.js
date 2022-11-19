@@ -493,6 +493,7 @@ Blockly.Css.CONTENT = [
   '.blocklyFlyout {',
     'position: absolute;',
     'z-index: 20;',
+    'filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.1))',
   '}',
   '[effect=\'blur\'] .blocklyFlyout {',
     'backdrop-filter: blur(4px);',
@@ -730,7 +731,7 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyMainBackground {',
-    'stroke-width: 1;',
+    'stroke-width: 0;',
     'stroke: #c6c6c6;',  /* Equates to #ddd due to border being off-pixel. */
   '}',
 
@@ -860,6 +861,7 @@ Blockly.Css.CONTENT = [
     'position: absolute;',
     'font-family: "Helvetica Neue", Helvetica, sans-serif;',
     'z-index: 40;', /* so blocks go over toolbox when dragging */
+    'filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.1))',
     '-webkit-tap-highlight-color: transparent;', /* issue #1345 */
   '}',
 
@@ -1337,7 +1339,6 @@ Blockly.Css.CONTENT = [
     'text-align: center;',
     'display: flex;',
     'align-items: center;',
-    'transition: 0.25s ease-out;',
   '}',
 
   '.scratchCategoryMenuHorizontal .scratchCategoryMenuItem {',
@@ -1350,14 +1351,14 @@ Blockly.Css.CONTENT = [
 
   '.scratchCategoryItemBar {',
     'width: 0.35rem;',
-    'height: 2rem;',
-    'margin: 0 0.5rem 0 0;',
+    'height: 1.6rem;',
+    'margin: 0.25rem 0.5rem;',
+    'border-radius: 1rem;',
     'display: inline-block;',
   '}',
 
   '.scratchCategoryMenuItemLabel {',
     'display: inline-block;',
-    'transition: 0.25s ease-out;',
   '}',
 
   '.scratchCategoryItemIcon {',

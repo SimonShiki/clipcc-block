@@ -81,6 +81,10 @@ Blockly.WorkspaceDragger.prototype.startDrag = function() {
   if (Blockly.selected) {
     Blockly.selected.unselect();
   }
+  const flyout = this.workspace_.getFlyout();
+  if (flyout && flyout.autoClose) {
+    flyout.hide();
+  }
   this.workspace_.setupDragSurface();
 };
 
